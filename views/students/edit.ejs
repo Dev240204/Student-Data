@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+<div class="container">
+    <h1>Edit Student Details</h1>
+    <form method="POST" action="/students/<%= student._id %>?_method=PATCH">
+        <div class="name">
+            <label for="name">Enter Name of Student  </label>
+            <input type="text" name="name" id="name" value="<%=student.name%>">
+        </div>
+        <br>
+        <div class="rollNo">
+            <label for="roll">Enter Roll Number of Student</label>
+            <input type="text" name="rollNo" id="roll" value="<%=student.rollNo%>">
+        </div>
+        <br>
+        <div class="branch">
+            <label for="branch">Enter Branch of Student</label>
+            <input type="text" name="branch" id="branch" value="<%=student.branch%>">
+        </div>
+        <br>
+        <button>Save the Details</button>
+    </form>
+</div>
+
+<%- include('../partials/footer') %> 

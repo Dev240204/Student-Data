@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+<div class="container">
+    <h1>Add Student</h1>
+    <form method="post" action="/students">
+        <div class="name">
+            <label for="name">Enter Name of Student  </label>
+            <input type="text" name="name" id="name" placeholder="Enter Name">
+        </div>
+        <br>
+        <div class="rollNo">
+            <label for="roll">Enter Roll Number of Student</label>
+            <input type="text" name="rollNo" id="roll" placeholder="Enter Roll Number">
+        </div>
+        <br>
+        <div class="branch">
+            <label for="branch">Enter Branch of Student</label>
+            <input type="text" name="branch" id="branch" placeholder="Enter Branch">
+        </div>
+        <br>
+        <button>Save the Details</button>
+    </form>
+</div>
+
+<%- include('../partials/footer') %> 

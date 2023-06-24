@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+
+<div class="container">
+    <h1>Student Details</h1>
+    <table id="table">
+        <head id="table">
+            <th>Name</th>
+            <th>Roll Number</th>
+            <th>Branch</th>
+        </head>
+        <body>
+            <% for(let student of students) { %>
+                <tr>
+                    <td id="tableData"><%= student.name %> </td>
+                    <td id="tableData"><%= student.rollNo %></td>
+                    <td id="tableData"><%= student.branch %></td>
+                    <td>
+                        <a href="/students/<%= student._id %>/edit">
+                            <button>Edit Student Details</button>
+                        </a>
+                    </td>
+                    <td>
+                        <form method="POST" action="/students/<%= student._id %>?_method=DELETE">
+                            <button>Delete Student Details</button>
+                        </form>
+                    </td>
+                </tr>
+            <% } %>
+        </body>
+    </table>
+    <a href="/students/new">
+        <button>Add New Student</button>
+    </a>
+</div>
+
+<%- include('../partials/footer') %> 
