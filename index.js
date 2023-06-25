@@ -7,7 +7,7 @@ const app = express();
 //mongodb://127.0.0.1:27017/studentManageApp
 
 mongoose.set('strictQuery',true);
-mongoose.connect('mongodb://admin:password@localhost:27017')
+mongoose.connect('mongodb://admin:password@mongodb:27017')
     .then(()=>{
         console.log("Mongo DB Connection Open!!");
     })

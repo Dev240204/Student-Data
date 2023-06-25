@@ -1,10 +1,10 @@
-FROM node:20-alpine3.17
+FROM node:20-alpine
 
 ENV MONGO_DB_USERNAME=admin \
     MONGO_DB_PWD=password
 
 RUN mkdir -p /home/app
 
-COPY . /homr/app
+COPY . /home/app
 
-CMD [ "node","index.js" ]
+CMD [ "node","/home/app/index.js" ]
